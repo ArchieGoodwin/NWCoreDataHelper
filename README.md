@@ -1,7 +1,7 @@
 # NWCoreDataHelper
 ================
 
-NSManagedObject category with Core Data helper methods for retrieving and saving data
+NSManagedObject category with Core Data helper methods for retrieving and saving data. Has method to save in separated thread
 
 ### Usage
 
