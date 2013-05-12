@@ -1,4 +1,4 @@
-### NWCoreDataHelper
+# NWCoreDataHelper
 ================
 
 NSManagedObject category with Core Data helper methods for retrieving and saving data
@@ -17,32 +17,32 @@ All methods a duplicated for use with separate Core Data context or root context
 
 Then in code simply use:
 
-# Get records with NSPredicate in context
+### Get records with NSPredicate in context
 
 ``` objective-c
         NSPredicate *predicate;
         predicate = [NSPredicate predicateWithFormat:@"userId = %@", appDelegate.manager.userId];
         NSMutableArray *array =  [NSManagedObject getFilteredRecordsWithPredicate:predicate localContext:localContext];
 ```
-# Get all recrods 
+### Get all recrods 
 
 ``` objective-c
         NSMutableArray *array = [NSManagedObject getAllRecords];
 ```
 
-# Create entity
+### Create entity
 
 ``` objective-c
         YourNiceObjectName *ts = [YourNiceObjectName createEntityInContext:localContext];
 ```
 
-# Save default context
+### Save default context
 
 ``` objective-c
         [NSManagedObject saveDefaultContext];
 ```
 
-# Save in separate context:
+### Save in separate context:
 
 ``` objective-c
         [Chainge saveDataInBackgroundWithContext:^(NSManagedObjectContext *context) {
