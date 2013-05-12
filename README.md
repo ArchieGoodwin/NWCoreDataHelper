@@ -45,7 +45,7 @@ Then in code simply use:
 ### Save in separate context:
 
 ``` objective-c
-        [Chainge saveDataInBackgroundWithContext:^(NSManagedObjectContext *context) {
+        [NSManagedObject saveDataInBackgroundWithContext:^(NSManagedObjectContext *context) {
                         // your code for creating/updating data
                         //changes automatically merging in default context
                     } completion:^{
