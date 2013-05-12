@@ -5,15 +5,16 @@ NSManagedObject category with Core Data helper methods for retrieving and saving
 
 ### Usage
 
-Firstly, check if this lines a correct for your Application Delegate. 
+Firstly, check if this lines in category are correct for your Application Delegate. 
 ``` objective-c
-        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+#import "AppDelegate.h"
+#define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 ```
 Also you need to init managedObjectContext with concurrency option
 
 ``` objective-c
-#import "AppDelegate.h"
-#define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+_managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+
 ```
 
 All methods a duplicated for use with separate Core Data context or root context (appDelegate.managedObjectContext)
