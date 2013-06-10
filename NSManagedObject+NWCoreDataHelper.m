@@ -179,7 +179,7 @@
     [appDelegate.managedObjectContext setMergePolicy:NSMergeByPropertyStoreTrumpMergePolicy];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self
-                           selector:@selector(mergeChangesFromNotification::)
+                           selector:@selector(mergeChangesFromNotification:)
                                name:NSManagedObjectContextDidSaveNotification
                              object:context];
 
